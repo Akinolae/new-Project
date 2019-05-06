@@ -1,0 +1,28 @@
+{
+  "name": "new-project",
+  "version": "1.0.0",
+  "description": "My weather app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev" : "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akinolae/new-Project.git"
+  },
+  "keywords": [
+    "\"my",
+    "first",
+    "project\""
+  ],
+  "author": "Akinola Makinde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akinolae/new-Project/issues"
+  },
+  "homepage": "https://github.com/Akinolae/new-Project#readme",
+  "dependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
