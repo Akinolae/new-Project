@@ -49,13 +49,20 @@ body{
     margin-left: 22%;
     
 }
+.logo{
+    background-color: rgba(51, 51, 51, 0.6);
+    padding: 6px;
+    border-radius: 4px;
+    width: 30%;
+    margin-left: 33%;
+}
 #text {
     font-size: 20px;
-    width: 65%;
+    width: 68%;
     height: 35px;
     border-radius: 5px;
     text-align: center;
-    margin-left: 13%;
+    margin-left: 10%;
 }
 #description{
     color: red;
@@ -78,7 +85,7 @@ body{
 .btn{
     background: green;
     height: 40px;
-    width: 60px;
+    width: 15%;
     border-radius: 5px;
     color: white;
 }
@@ -151,7 +158,7 @@ li:hover > ul.drop-menu li{
     height: 100px;
     text-align: center;
     color: #333;
-    background: rgb(46, 214, 144,0.5);
+    background: rgba(46, 214, 144,0.5);
     margin-left: 40%;
     line-height: 3em;
 }
@@ -172,13 +179,18 @@ a {
 .btn2 {
     width: 27px;
     height: 25px;
-    background: red;
     float: right;
     margin: 2px;
     cursor: pointer;
+    background: rgba(46, 214, 144,0.5);
     color: white;
     padding: 3px;
-    box-shadow: 0 0 6px #201c1c;
+}
+.logo1{
+    color: white;
+     text-align: center;
+     padding: 5px; 
+     font-size: 30px;
 }
 .btn2:hover{
     background-color: grey;
