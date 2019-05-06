@@ -34,6 +34,7 @@ body{
         width: 23%;
         margin-left: 38%;
         font-weight: bold;
+        text-shadow: 0 0 5px black;
     }
 .my-form{
     background: #333;
@@ -46,7 +47,7 @@ body{
     margin-top: 7%;
     line-height: 12em;
     color: white;
-    margin-left: 22%;
+    margin-left: 25%;
     
 }
 .logo{
@@ -73,7 +74,7 @@ body{
     background-color: white;
     color: red;
     text-align: center;
-    margin-left: 31%;
+    margin-left: 34%;
     padding: 15px;
     line-height: 5em;
     width: 30%;
