@@ -35,11 +35,11 @@ const hours = date.getHours();
 let timeOfDay;
 
 if(hours < 12){
-    timeOfDay = "Good morning";
+    timeOfDay = "Hello, Good morning";
 } else if(hours >= 12 ){
-    timeOfDay = "Good afternoon";
+    timeOfDay = "Hello, Good afternoon";
 } else {
-    timeOfDay = "Good evening ";
+    timeOfDay = "Hello, Good evening ";
 }
 
 timeUpdate.textContent = timeOfDay;
