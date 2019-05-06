@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/myWeather.css">
+    <title>Weather</title>
+</head>
+<body>
+    
+    <div class="logo">
+            <h1 style="color: white; text-align: center;padding: 5px; font-size: 30px;">Weath<span style="color: red;">ER</span></h1>
+    </div>
+   <div id="time" style="color: white;">
+    </div>
+    <div id="popOver">
+        <button id="closeBtn" class="btn2">X</button>
+        <a href="http://facebook.com/Akinola/Mankind">Kindly like our page on Facebook</a>
+    </div>
+   <div>
+        <div class="my-form">
+            <div class="main">
+                    <form>
+                        <input type="text" id="text" placeholder="city...">
+                        <button id="submit" class="btn">search</button>
+                    </form>
+            </div>
+   </div>
+   <div class="spinner" id="load"></div>
+   <div id=error>
+        <h4>ERROR: sorry! something went wrong</h4>
+        <img src="image/sun.jpg" alt="sun" width="100" height="100">
+   </div>
+   <div id="loading">
+        <h1 id="city">City Name</h1>        
+        <div id="description">Weather description</div>
+        <div id="temp" style="color: green;">temperature</div>
+    </div>
+
+   <footer style="text-align: center; line-height: 20em; color: white;">
+       <h2> &copy; Akinola <span style="color: black;">2019</span></h2>
+   </footer>
+
+   <script src="js/search.js"></script>
+   <script src="js/weatherData.js"></script>
+    <script src="js/index.js">
+    </script>
+</body>
+</html>
