@@ -33,8 +33,6 @@ body{
         padding: 15px;
         width: 23%;
         margin-left: 38%;
-        font-weight: bold;
-        text-shadow: 0 0 5px black;
     }
 .my-form{
     background: #333;
@@ -55,13 +53,13 @@ body{
     padding: 6px;
     border-radius: 4px;
     width: 30%;
-    margin-left: 33%;
+    margin-left: 34%;
+    
 }
 #text {
     font-size: 20px;
     width: 68%;
     height: 35px;
-    border-radius: 5px;
     text-align: center;
     margin-left: 10%;
 }
@@ -84,16 +82,17 @@ body{
     opacity: 0.5;
 }
 .btn{
-    background: green;
-    height: 40px;
+    background: royalblue;
+    top: 0;
+    height: 44px;
     width: 15%;
-    border-radius: 5px;
+    border: none;
     color: white;
+    transition: background ease-in-out 0.3s;
 }
 .btn:hover {
-    transition: all ease-in-out 0.2s;
-    background: #333;
-    color: white;
+    background: #0dd873;
+    color: #fff;
 }
 .changeBorder {
     border: 3px solid;
@@ -161,11 +160,12 @@ li:hover > ul.drop-menu li{
     color: #333;
     background: rgba(46, 214, 144,0.5);
     margin-left: 40%;
-    line-height: 3em;
+    line-height: 2em;   
+     transition: transform 0.3s ease-in-out ;
 }
 #popOver:hover{
     transform: scale(1.1);
-    transition: all ease 0.4s;
+    box-shadow: 0 25px 20px -20px black;
 }
 a {
     text-decoration: none;
@@ -173,6 +173,8 @@ a {
     font-family: Arial, Helvetica, sans-serif;
     color: #333;
     text-shadow: 0 0 2px gray;
+    text-align: center;
+    transition: color ease-in 0.2s;
 }
  a:hover{
     color: white;
@@ -183,9 +185,11 @@ a {
     float: right;
     margin: 2px;
     cursor: pointer;
-    background: rgba(46, 214, 144,0.5);
+    background:rgba(46, 214, 144,0.3);
     color: white;
     padding: 3px;
+    border: none;
+    transition: background ease-in-out 0.3s;
 }
 .logo1{
     color: white;
