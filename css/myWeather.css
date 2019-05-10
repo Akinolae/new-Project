@@ -1,6 +1,7 @@
 body{
-    background: #1B82A3;
+    background-image: url(/new-Project/images/winter.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
     width: 100%;
 }
@@ -33,7 +34,8 @@ body{
         padding: 15px;
         width: 23%;
         margin-left: 38%;
-        color: #f5c469ad;
+        color: #fff;
+        font-weight: bold;
     }
 .my-form{
     background: #333;
