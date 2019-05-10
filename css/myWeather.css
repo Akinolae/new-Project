@@ -36,6 +36,7 @@ body{
         margin-left: 38%;
         color: #fff;
         font-weight: bold;
+        border: none;
     }
 .my-form{
     background: #333;
@@ -75,7 +76,7 @@ body{
     background-color: white;
     color: red;
     text-align: center;
-    margin-left: 34%;
+    margin-left: 30%;
     padding: 15px;
     line-height: 5em;
     width: 30%;
@@ -86,9 +87,9 @@ body{
 }
 .btn{
     background: royalblue;
-    top: 0;
-    height: 44px;
-    width: 15%;
+   padding-top: 4px;
+    height: 45px;
+    width: 20%;
     border: none;
     color: white;
     transition: background ease-in-out 0.3s;
