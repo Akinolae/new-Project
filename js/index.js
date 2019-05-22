@@ -51,10 +51,13 @@ const hours = date.getHours();
 let timeOfDay;
 
 if(hours < 12){
+    timeUpdate.style.color = '#CAE132';
     timeOfDay = "Hello, Good morning";
-} else if(hours >= 12 ){
+} else if(hours >= 12 && hours < 17){
+    timeUpdate.style.color = '#1A6832';
     timeOfDay = "Hello, Good afternoon";
 } else {
+    timeUpdate.style.color = '#0D4292';
     timeOfDay = "Hello, Good evening ";
 }
 

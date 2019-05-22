@@ -65,7 +65,7 @@ body{
     width: 68%;
     height: 35px;
     text-align: center;
-    margin-left: 10%;
+    margin-left: 5%;
 }
 #description{
     color: red;
@@ -76,7 +76,7 @@ body{
     background-color: white;
     color: red;
     text-align: center;
-    margin-left: 30%;
+    margin-left: 35%;
     padding: 15px;
     line-height: 5em;
     width: 30%;

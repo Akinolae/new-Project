@@ -4,8 +4,8 @@ function submitForm (e){
 
     if(text.value.trim().length === 0){
         alert("city name cannot be empty");
+        e.preventDefault();
     }
-    e.preventDefault();
     loadingText.style.display = 'block';
     loadingBox.style.display = 'none';
     errorMsg.style.display = 'none';
