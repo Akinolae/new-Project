@@ -57,7 +57,7 @@ if(hours < 12){
     timeUpdate.style.color = '#1A6832';
     timeOfDay = "Hello, Good afternoon";
 } else {
-    timeUpdate.style.color = '#0D4292';
+    timeUpdate.style.color = '#fff';
     timeOfDay = "Hello, Good evening ";
 }
 
