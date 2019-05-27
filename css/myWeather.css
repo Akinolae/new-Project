@@ -179,6 +179,7 @@ li:hover > ul.drop-menu li{
     text-shadow: 0 0 2px gray;
     text-align: center;
     transition: color ease-in 0.2s;
+    line-height: 5em;
 }
  .twitter:hover{
     color: white;
