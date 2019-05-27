@@ -162,7 +162,7 @@ li:hover > ul.drop-menu li{
     height: 100px;
     text-align: center;
     color: #333;
-    background: rgba(46, 214, 144,0.5);
+    background: #2ed69080;
     margin-left: 40%;
     line-height: 2em;   
      transition: transform 0.3s ease-in-out ;
@@ -189,7 +189,7 @@ li:hover > ul.drop-menu li{
     float: right;
     margin: 2px;
     cursor: pointer;
-    background:rgba(46, 214, 144,0.3);
+    background: rgba(255, 0, 0, 0.658);
     color: white;
     padding: 3px;
     border: none;
@@ -336,11 +336,12 @@ img {
 }
 .akin1{
     width: 50%;
-    height: 350px;
+    height: 250px;
     background: #ffffffab;
     padding: 7px;
     margin-left: 3%;
     display: inline-flex;
+    box-shadow: 0 25px 20px -20px black;
 }
 .akin1 > p {
     line-height: 2em;

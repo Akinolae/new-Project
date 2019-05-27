@@ -10,23 +10,6 @@ const errorMsg = document.getElementById('error');
 const btn2 = document.getElementById('closeBtn');
 const popOver = document.getElementById('popOver');
 
-
-setInterval(()=>{
-    countTime--
-    countDown.style.color = 'white';
-    countDown.textContent = countTime;
-    if(countTime == 0){
-        countDown.textContent ='your time is up';
-        setTimeout(() =>{
-            countDown.style.display = 'none'
-        }, 900)        
-    }
-    if(countTime <= 5 ){
-        countDown.style.color = 'red';
-    
-    }
-}, 1000)
-
     setTimeout(() => {
         popOver.style.display = 'block';
     }, 4000)
