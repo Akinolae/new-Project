@@ -95,3 +95,21 @@ input:focus {
 .login-option:checked {
   background: #28A745;
 }
+
+.home{
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 27px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  
+}
+.home a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+.home a:hover{
+  color: #6d6d6d;
+}
