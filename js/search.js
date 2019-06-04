@@ -1,7 +1,6 @@
 
 submit.addEventListener('click', submitForm);
 function submitForm (e){
-
     if(text.value.trim().length === 0){
         alert("city name cannot be empty");
     }
