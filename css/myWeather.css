@@ -45,11 +45,13 @@ body{
     border: 2px solid #333;
     border-radius: 4px;
     height: 10%;
-    width: 47%;
+    width: 50%;
     margin-top: 7%;
     line-height: 12em;
     color: white;
     margin-left: 25%;
+    
+    
     
 }
 .logo{
@@ -165,7 +167,7 @@ li:hover > ul.drop-menu li{
     background: #2ed69080;
     margin-left: 40%;
     line-height: 2em;   
-     transition: transform 0.3s ease-in-out ;
+     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out ;
 }
 #popOver:hover{
     transform: scale(1.1);
@@ -273,43 +275,6 @@ nav > ul {
 nav > ul {
    margin-left: 30px;
 }
-}
-.spinner{
-    width: 100px;
-    height: 100px;
-    border: 5px solid #aaa;
-    border-radius: 50%;
-    position: relative;
-    margin: 80px;
-    display: inline-block;
-    animation: spin 1.4s linear infinite;
-}
-.spinner::before{
-    content: "";
-    height: 30px;
-    width: 30px;
-    background: green;
-    border-radius: 50%;
-    position: absolute;
-    top: 35px;
-    left: 35px;
-}
-.spinner::after{
-    content: "";
-    height: 20px;
-    width: 20px;
-    background: #2ed690;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-}
-@keyframes spin{
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
 }
 .navigation{
     display: flex;

@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 96px 0 0 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url(/new-Project/images/winter.jpg);
+  background-size: cover;
+  font-family: 'Open Sans', sans-serif;
+  user-select: none;
+}
+
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.container h1, .signin-btn {
+  color: white;
+}
+
+
+.container h1, .forg-pswd {
+  text-align: center;
+}
+
+.container h1, .username {
+  margin: 0 0 24px 0;
+}
+
+
+.container h1 {
+  font-weight: normal;
+}
+
+.username label, .username input, .password label, .password input, .forg-pswd, .signin-btn {
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.username label, .password label, .keep-loggedin label {
+  color: #AAA;
+}
+
+.username label, .password label {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.username input, .password input {
+  padding: 8px;
+  font-size: 16px;
+  color: #190080;
+}
+
+.password, hr {
+  margin-bottom: 12px;
+}
+
+
+.keep-loggedin {
+  margin-bottom: 32px;
+}
+
+
+.signin-btn {
+  margin-bottom: 48px;
+  padding: 8px 0;
+  background: #28A745;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+.forg-pswd {
+  color: rgba(255,255,255, 0.9);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+
+input:focus {
+  border: 2px solid green;
+  outline: none;
+}
+
+
+.login-option:checked {
+  background: #28A745;
+}
