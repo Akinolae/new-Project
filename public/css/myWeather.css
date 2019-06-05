@@ -255,7 +255,9 @@ li:hover > ul.drop-menu li{
 }
 @media(max-width: 560px){
     .logo{
-        margin-left: 30px;
+        width: 50vw;
+        margin-right: 15%;
+        
     }
     .aboutMain{
         width: 120vw;
