@@ -1,15 +1,3 @@
-body {
-  margin: 0;
-  padding: 96px 0 0 0;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  background-image: url(/new-Project/images/winter.jpg);
-  background-size: cover;
-  font-family: 'Open Sans', sans-serif;
-  user-select: none;
-}
-
 
 .container {
   max-width: 400px;
