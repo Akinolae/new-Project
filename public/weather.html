@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="css/myWeather.css">
-    <title>Weather</title>
-</head>
-<body>
-    
-    <div class="logo">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" type="text/css" href="css/myWeather.css">
+        <title>Weather</title>
+    </head>
+
+    <body>
+
+        <div class="logo">
             <h1 class="logo1">Weath<span style="color: red;">ER</span></h1>
-            <p style="color: white; text-align: center; font-family: tahoma, helvetica, sans-serif;">A weather app you can trust...</p>
-    </div>
-    <div class='navigation'>
-        <a href="about.html"  class='about'>About <span>|</span></a> 
-        <a href="version.html" class='version'>version <span>|</span></a>
-        <a href="login.html" class="signIn">sign in</a>
-    </div>
-   <div id="time">
-    </div>
-    <div id="popOver" >
-        <button id="closeBtn" class="btn2">x</button>
-        <a href="http://twitter.com" class='twitter'> twitter:  @akinola_mankind</a>
-    </div>
+            <p style="color: white; text-align: center; font-family: tahoma, helvetica, sans-serif;">A weather app you
+                can trust...</p>
+        </div>
+        <div class='navigation'>
+            <a href="/about" class='about'>About <span>|</span></a>
+            <a href="/version" class='version'>version <span>|</span></a>
+            <a href="/signin" class="signIn">log out</a>
+        </div>
+        <div id="time"></div>
+        <div id="popOver">
+            <button id="closeBtn" class="btn2">x</button>
+            <a href="http://twitter.com" class='twitter'> twitter: @akinola_mankind</a>
+        </div>
         <div class="my-form">
             <div class="main">
-                    <form>
-                        <input type="text" id="text" placeholder="city Name...">
-                        <button id="submit" class="btn">search</button>
-                    </form>
+                <form>
+                    <input type="text" id="text" placeholder="city Name...">
+                    <button id="submit" class="btn">search</button>
+                </form>
             </div>
-   </div>
-   <div id="load"></div>
-   <div id=error>
-        <img src="images/sad emoji.png" alt="sad face" width="100" height="100">
-        <h4>ERROR: sorry! something went wrong</h4>
-   </div>
-   <div id="loading">
-        <h1 id="city">City Name</h1>        
-        <div id="description">Weather description</div>
-        <div id="temp" style="color: green;">temperature</div>
-    </div>
-   <footer style="text-align: center; line-height: 20em; color: white;">
-       <h2> &copy; Akinola <span style="color: black;">2019</span></h2>
-   </footer>
+        </div>
+        <div class="news" id="news">
+            <div class="newsDisplay" id='1'></div>
+            <div class="newsDisplay" id='2'></div>
+            <div class="newsDisplay" id='3'></div>
+            <div class="newsDisplay" id='4'></div>
+            <div class="newsDisplay" id='5'></div>
+            <div class="newsDisplay" id='6'></div>
+            <div class="newsDisplay" id='7'></div>
+            <div class="newsDisplay" id='8'></div>
+        </div>
+        <div id="load"></div>
+        <div id=error>
+            <img src="images/sad emoji.png" alt="sad face" width="100" height="100">
+            <h4>ERROR: sorry! something went wrong</h4>
+        </div>
+        <div id="loading">
+            <h1 id="city">City Name</h1>
+            <div id="description">Weather description</div>
+            <div id="temp" style="color: green;">temperature</div>
+        </div>
+        <footer style="text-align: center; line-height: 20em; color: white;">
+            <h2> &copy; Akinola <span style="color: black;">2019</span></h2>
+        </footer>
+        <script src="js/index.js"></script>
+        <script src="js/search.js"></script>
+        <script src="js/weatherData.js"></script>
+        
+    </body>
 
-   <script src="js/search.js"></script>
-   <script src="js/weatherData.js"></script>
-    <script src="js/index.js">
-    </script>
-</body>
 </html>

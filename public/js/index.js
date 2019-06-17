@@ -12,6 +12,8 @@ const popOver = document.getElementById('popOver');
 
     setTimeout(() => {
         popOver.style.display = 'block';
+        popOver.classList.add('popOver');
+
     }, 4000)
 
 btn2.addEventListener('click', closePopOver);

@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Akinolae/new-Project#readme",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "nodemon": "^1.19.0",
     "tachyons": "^4.11.1"
