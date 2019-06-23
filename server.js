@@ -10,15 +10,31 @@ app.use(express.urlencoded({
     extended: true
 }));
 
+const database = {
+    username: 'Akinola',
+    email: 'makindeakinola22@gmail.com',
+    password: '12345'
+}
 
+app.get('/user',(req, res) => {
+    res,send(database);
+})
+// middleware;
 app.use(express.static(path.join(__dirname, 'public')));
+//
+
+app.get('/news', (req, res)=>{
+    res.sendFile(path.join(__dirname,'public','news.html'))
+})
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 app.get('/signin', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'signin.html'));
 });
-
+app.get('/weather', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'weather.html'));
+});
 app.get('/about', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'about.html'));
 });
@@ -34,7 +50,7 @@ app.post('/login', (req, res) => {
         password
     } = req.body;
     if (email === database.email && password === database.password) {
-        res.sendFile(path.join(__dirname, 'public', 'weather.html'))
+        res.redirect('/weather')
     } else {
         res.status(400).sendFile(path.join(__dirname, 'public', 'about.html'))
     }

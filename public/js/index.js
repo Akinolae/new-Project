@@ -9,6 +9,7 @@ const timeUpdate = document.getElementById('time');
 const errorMsg = document.getElementById('error');
 const btn2 = document.getElementById('closeBtn');
 const popOver = document.getElementById('popOver');
+const dateDisplay = document.getElementById('date');
 
     setTimeout(() => {
         popOver.style.display = 'block';
@@ -30,7 +31,6 @@ function changeBorder(e){
         loadingBox.style.display ='none';
     }
 }
-
 const date = new Date();
 const hours = date.getHours();
 let timeOfDay;
@@ -47,3 +47,15 @@ if(hours < 12){
 }
 
 timeUpdate.textContent = timeOfDay;
+
+// document.getElementById('btn').addEventListener('click', getData);
+
+// function getData (){
+//             fetch('http://localhost:3000/user')
+//             .then(res => res.json())
+//             .then(data =>{
+//                 res.send(data)
+//                 console.log(data)
+//               document.getElementById('display').textContent = data;
+//             })
+// }
