@@ -1,10 +1,10 @@
 const express = require('express');
 const path = require('path');
-const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({
     extended: true
@@ -17,7 +17,7 @@ const database = {
 }
 
 app.get('/user',(req, res) => {
-    res,send(database);
+    res.send(database);
 })
 // middleware;
 app.use(express.static(path.join(__dirname, 'public')));

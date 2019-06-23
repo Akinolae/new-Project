@@ -1,8 +1,14 @@
 // const date =  document.getElementById('date');
 // date.textContent = 'hellow world';
-const btn = document.getElementById('btn');
-btn.addEventListener('click', displayNews);
-    
+// const btn = document.getElementById('btn');
+// btn.addEventListener('click', displayNews);
+    // function displayUser (){
+    //     fetch('http://localhost:3000/user')
+    //     .then(res => res.json())
+    //     .then(data =>  username = data.username,
+    //                     email = data.email)
+    // }
+    // displayUser();
 
 // const params = () =>{
 //     const news1 = document.getElementById('1');
@@ -22,13 +28,13 @@ btn.addEventListener('click', displayNews);
 
 // params();
 
-const url = 'https://newsapi.org/v2/top-headlines?' + 'country=ng&' +'apiKey=797bc6132d9d4515a4653fd5350e6ce7';
-const myUrl = new Request(url);
-function displayNews (){
-    const news3 = document.getElementById('3'),
-    news2 = document.getElementById('2');
-    fetch(myUrl)
-    .then(response => response.json())
-    .then(data =>  data)
-}
-console.log(data);
+// const url = 'https://newsapi.org/v2/top-headlines?' + 'country=ng&' +'apiKey=797bc6132d9d4515a4653fd5350e6ce7';
+// const myUrl = new Request(url);
+// function displayNews (){
+//     const news3 = document.getElementById('3'),
+//     news2 = document.getElementById('2');
+//     fetch(myUrl)
+//     .then(response => response.json())
+//     .then(data =>  data)
+// }
+// console.log(data);

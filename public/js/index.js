@@ -11,6 +11,39 @@ const btn2 = document.getElementById('closeBtn');
 const popOver = document.getElementById('popOver');
 const dateDisplay = document.getElementById('date');
 
+
+
+// fetching data from the database to be displayed on the ui;
+fetch('http://localhost:3000/user')
+.then(res => res.json())
+.then(data =>   console.log(data))
+// instantiation of the date that effectively 
+    // returns a strings that greets the user whenever he/she logs in;
+
+    const date = new Date();
+    const hours = date.getHours();
+    let timeOfDay;
+
+    if(hours < 12){
+        timeUpdate.style.color = '#CAE132';
+        timeOfDay = `Hello , Good morning`;
+    } else if(hours >= 12 && hours < 17){
+        timeUpdate.style.color = '#1A6832';
+        timeOfDay = "Hello, Good afternoon";
+    } else {
+        timeUpdate.style.color = '#fff';
+        timeOfDay = `Hello  , Good evening`;
+        document.body.style.background = "#0C0C0B";
+    }
+
+    timeUpdate.textContent = timeOfDay;
+
+
+
+
+
+
+
     setTimeout(() => {
         popOver.style.display = 'block';
     }, 4000)
@@ -29,23 +62,7 @@ function changeBorder(e){
         loadingBox.style.display ='none';
     }
 }
-const date = new Date();
-const hours = date.getHours();
-let timeOfDay;
 
-if(hours < 12){
-    timeUpdate.style.color = '#CAE132';
-    timeOfDay = "Hello, Good morning";
-} else if(hours >= 12 && hours < 17){
-    timeUpdate.style.color = '#1A6832';
-    timeOfDay = "Hello, Good afternoon";
-} else {
-    timeUpdate.style.color = '#fff';
-    timeOfDay = "Hello, Good evening ";
-    document.body.style.background = "#0C0C0B";
-}
-
-timeUpdate.textContent = timeOfDay;
 
 // document.getElementById('btn').addEventListener('click', getData);
 
