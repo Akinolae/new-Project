@@ -13,8 +13,6 @@ const dateDisplay = document.getElementById('date');
 
     setTimeout(() => {
         popOver.style.display = 'block';
-        popOver.classList.add('popOver');
-
     }, 4000)
 
 btn2.addEventListener('click', closePopOver);
@@ -44,6 +42,7 @@ if(hours < 12){
 } else {
     timeUpdate.style.color = '#fff';
     timeOfDay = "Hello, Good evening ";
+    document.body.style.background = "#0C0C0B";
 }
 
 timeUpdate.textContent = timeOfDay;
