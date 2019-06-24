@@ -23,6 +23,8 @@ app.get('/user',(req, res) => {
 app.use(express.static(path.join(__dirname, 'public')));
 //
 
+// All get methods here
+
 app.get('/news', (req, res)=>{
     res.sendFile(path.join(__dirname,'public','news.html'))
 })
@@ -41,6 +43,7 @@ app.get('/about', (req, res) => {
 app.get('/version', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'version.html'));
 });
+
 
 // registration and validation of user, plus login params
 

@@ -6,7 +6,7 @@
 }
 body {
     background:#51aae6;
-    height: auto;
+    height: 70vh;
     width: 100%;
     transition: all ease-in-out 0.4s;
 }
@@ -70,15 +70,14 @@ body {
 }
 
 .my-form {
-    background: #333;
+    background: #777676;
     padding: 10px;
-    opacity: 0.8;
-    border: none;
-    height: 30vh;
+    opacity: 0.7;
+    height: 260px;
     width: 60%;
-    margin: 5% auto;
+    margin: 40px auto;
     color: white;
-    border-radius: 25px;
+    box-shadow: 20px 20px  20px  #333333;
 }
 
 .logo {
@@ -156,194 +155,23 @@ body {
 
 
 #popOver {
-    display: none;
-    width: 300px;
-    height: 100px;
-    text-align: center;
+    width: 30px;
+    height: 40px;
     color: #333;
-    background: #2ed69080;
     margin: 30px auto;
-    line-height: 2em;
     transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: flex-end;
+    align-self: flex-end;
+    position: fixed;
 }
 
-#popOver:hover {
-    transform: scale(1.1);
-    box-shadow: 0 25px 20px -20px black;
-}
-
-.twitter {
-    text-decoration: none;
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #333;
-    text-shadow: 0 0 2px gray;
-    text-align: center;
-    transition: color ease-in 0.2s;
-    line-height: 5em;
-}
-
-.twitter:hover {
-    color: white;
-}
-
-.btn2 {
-    width: 27px;
-    height: 25px;
-    float: right;
-    margin: 2px;
-    cursor: pointer;
-    background: rgba(255, 0, 0, 0.658);
-    color: white;
-    padding: 3px;
-    border: none;
-    transition: background ease-in-out 0.3s;
-}
 
 .logo1 {
     color: white;
     text-align: center;
     font-size: 30px;
 }
-
-.btn2:hover {
-    background-color: grey;
-}
-
-/* @media(max-width: 375px) {
-    .my-form {
-        margin: auto;
-        width: 100vw;
-    }
-}
-
- @media(max-width: 560px) {
-    .my-form {
-        width: 10vw;
-        margin: auto;
-        line-height: 6em;
-    }
-
-    #text {
-        width: 20vh;
-    }
-
-    #loading {
-        margin-left: 125px;
-        margin: 20px auto;
-    }
-
-    .logo {
-        margin-left: 3%;
-    }
-
-    .button {
-        margin-top: 30px;
-        margin-left: 50px;
-    }
-
-    nav>ul {
-        margin-left: 30px;
-    }
-} 
-
-@media(max-width: 560px) {
-    .logo {
-        width: 50vw;
-        margin-right: 15%;
-
-    }
-
-    .aboutMain {
-        width: 120vw;
-        height: 100vh;
-    }
-
-    .aboutMain img {
-        width: 35vw;
-        height: 50vh;
-    }
-
-    .aboutMainP {
-        width: 65vw;
-        text-align: center;
-    }
-
-    .akin1 {
-        width: 60vw;
-    }
-}
-
-@media(max-width: 768px) {
-    .my-form {
-        height: 100px;
-        width: 500px;
-        margin-left: 0px;
-        line-height: 6em;
-    }
-
-    #text {
-        width: 60vw;
-    }
-
-    #time {
-        line-height: 1em;
-    }
-
-    #loading {
-        margin-left: 300px;
-        margin-top: 60px;
-        border-radius: 4px;
-    }
-
-    .logo {
-        margin-left: 176px;
-    }
-
-    .navigation {
-        margin: auto;
-        width: 40vw;
-    }
-
-    .button {
-        margin-top: 30px;
-        margin-left: 50px;
-    }
-
-    nav>ul {
-        margin-left: 230px;
-    }
-
-    #error {
-        line-height: 1em;
-    }
-}
-
-@media(max-width: 1024) {
-    .my-form {
-        height: 100px;
-        width: 200px;
-        margin-left: 80px;
-        line-height: 6em;
-    }
-
-    #text {
-        width: 20vh;
-    }
-
-    .logo {
-        margin-left: 15px;
-    }
-
-    .button {
-        margin-top: 30px;
-        margin-left: 50px;
-    }
-
-    nav>ul {
-        margin-left: 30px;
-    }
-} */
 
 @keyframes spin {
     0% {
@@ -357,31 +185,39 @@ body {
 
 .navigation {
     display: grid;
-    grid-gap: 0.3rem;
-    grid-template-columns: repeat(4, 3fr);
+    background: #fff;
+    border-radius: 4px;
+    grid-template-columns: repeat(5, 3fr);
     justify-content: center;
     color: #fff;
-    width: 33%;
+    width: 350px;
+    height: 65px;
     margin: 30px auto;
 }
 .navigation > a {
     background: #2c2c2b;
     padding: 15px ;
     border-radius: 4px;
-    text-align: center;
     height: 53px;
+    width: auto;
 }
 
 .about,
 .version,
-.signIn {
+.signIn
+ {
     color: white;
+    padding: 10px;
     text-decoration: none;
     font-size: 16px;
     font-family: sans-serif;
     display: flex;
     justify-content: center;
+    text-align: center;
     transition: color 0.3s ease-in-out;
+    box-shadow: 5px 5px 5px  #333;
+    margin: 5px auto;
+    margin-left: 15px;
 }
 
 .about:hover,
