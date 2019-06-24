@@ -30,6 +30,7 @@ fetch('http://localhost:3000/user')
     } else if(hours >= 12 && hours < 17){
         timeUpdate.style.color = '#1A6832';
         timeOfDay = "Hello, Good afternoon";
+        document.body.style.background = '#F52A47';
     } else {
         timeUpdate.style.color = '#fff';
         timeOfDay = `Hello  , Good evening`;

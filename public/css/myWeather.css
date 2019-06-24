@@ -8,6 +8,7 @@ body {
     background:#51aae6;
     height: auto;
     width: 100%;
+    transition: all ease-in-out 0.4s;
 }
 .my-form form{
     width: 70%;
@@ -471,14 +472,37 @@ body {
         color: #fff;
   }
   .mainContainer{
-      width: 80%;
-      height: 90vh;
+      width: 1200px;
+      height: 100vh;
       border-radius: 7px;
+      background: #cfcdcd;
+      margin: auto;
+      justify-content: center;
+      transition: all ease-in-out 0.4s;
+      align-items: center;
+  }
+  .mainNav {
+      width: 800px;
       background: #fff;
-      margin: 30px auto;
+      height: 50px;
+      margin: 20px auto;
+      padding: 5px;
+      border-radius: 5px;
       display: flex;
       justify-content: center;
-      align-items: center;
+      box-sizing: border-box;
+  }
+  .mainNav button {
+    color: white;
+    background: #333;
+    height: 30px;
+    width: 60px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    outline: none;
+    margin: 5px;
   }
   .container2 {
     width: 80%;
@@ -492,7 +516,25 @@ body {
   .innerContainer{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 2em;
+      grid-gap: 1.5em;
+      margin:10px auto;
+      width: 1000px;
+
+  }
+  .innercontainer1 > h2,
+  .innercontainer1 > p {
+      padding: 10px;
+  }
+  .innercontainer1,
+  .innercontainer2,
+  .innercontainer3{
+      height: 300px;
+      margin-top: 35px;
+      width: 300px;
+      background: #fff;
+      box-shadow: 5px 5px 5px #969595;
+      border-radius: 5px;
+
   }
   .inner1,
   .inner2,
