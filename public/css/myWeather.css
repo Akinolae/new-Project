@@ -11,8 +11,8 @@ body {
     transition: all ease-in-out 0.4s;
 }
 .my-form form{
-    width: 70%;
-    height: 38%;
+    width: 73%;
+    height: 10vh;
     background: #fff;
     margin: 70px auto;
     border-radius: 45px;
@@ -70,9 +70,8 @@ body {
 }
 
 .my-form {
-    background: #777676;
+    background: #7776768f;
     padding: 10px;
-    opacity: 0.7;
     height: 260px;
     width: 60%;
     margin: 40px auto;
@@ -139,7 +138,7 @@ body {
     outline: none;
     transition: all ease-in-out 0.3s;
     margin: auto;
-    margin-right: 2%;
+    margin-right: 1%;
     padding: 10px;
 }
 
@@ -185,9 +184,8 @@ body {
 
 .navigation {
     display: grid;
-    background: #fff;
     border-radius: 4px;
-    grid-template-columns: repeat(5, 3fr);
+    grid-template-columns: repeat(4, 3fr);
     justify-content: center;
     color: #fff;
     width: 350px;
