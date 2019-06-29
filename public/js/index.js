@@ -8,15 +8,12 @@ const tempText = document.getElementById('temp');
 const timeUpdate = document.getElementById('time');
 const errorMsg = document.getElementById('error');
 const btn2 = document.getElementById('closeBtn');
-const popOver = document.getElementById('popOver');
+const validate = document.querySelector('.validate');
 const dateDisplay = document.getElementById('date');
 
 
 
-// fetching data from the database to be displayed on the ui;
-fetch('http://localhost:3000/user')
-.then(res => res.json())
-.then(data =>   console.log(data))
+
 // instantiation of the date that effectively 
     // returns a strings that greets the user whenever he/she logs in;
 
@@ -32,9 +29,9 @@ fetch('http://localhost:3000/user')
         timeOfDay = "Hello, Good afternoon";
         document.body.style.background = '#F52A47';
     } else {
-        timeUpdate.style.color = '#fff';
+        timeUpdate.style.color = '#0000';
         timeOfDay = `Hello  , Good evening`;
-        document.body.style.background = "#0C0C0B";
+        document.body.style.background = "#807B7B";
     }
 
     timeUpdate.textContent = timeOfDay;

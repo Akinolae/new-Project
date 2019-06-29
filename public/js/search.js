@@ -1,8 +1,11 @@
 
 submit.addEventListener('click', submitForm);
 function submitForm (e){
-    if(text.value.trim().length === 0){
-        alert("city name cannot be empty");
+    if(text.value.trim() === ''){
+        validate.style.opacity = '1';
+        setTimeout(()=>{
+            validate.style.opacity = '0';
+        }, 1100)
     }
     e.preventDefault();
     loadingText.style.display = 'block';
