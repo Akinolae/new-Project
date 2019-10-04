@@ -36,12 +36,6 @@ const dateDisplay = document.getElementById('date');
 
     timeUpdate.textContent = timeOfDay;
 
-
-
-
-
-
-
     setTimeout(() => {
         popOver.style.display = 'block';
     }, 4000)
