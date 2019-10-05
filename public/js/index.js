@@ -22,14 +22,14 @@ const dateDisplay = document.getElementById('date');
     let timeOfDay;
 
     if(hours < 12){
-        timeUpdate.style.color = '#CAE132';
+        timeUpdate.style.color = '#FFFF';
         timeOfDay = `Hello , Good morning`;
     } else if(hours >= 12 && hours < 17){
-        timeUpdate.style.color = '#1A6832';
+        timeUpdate.style.color = '#FFFF';
         timeOfDay = "Hello, Good afternoon";
         document.body.style.background = '#F52A47';
     } else {
-        timeUpdate.style.color = '#0000';
+        timeUpdate.style.color = '#FFFF';
         timeOfDay = `Hello  , Good evening`;
         document.body.style.background = "#807B7B";
     }
