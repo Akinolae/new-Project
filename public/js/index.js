@@ -36,11 +36,11 @@ const dateDisplay = document.getElementById('date');
 
     timeUpdate.textContent = timeOfDay;
 
-    setTimeout(() => {
-        popOver.style.display = 'block';
-    }, 4000)
+    // setTimeout(() => {
+    //     popOver.style.display = 'block';
+    // }, 4000)
 
-btn2.addEventListener('click', closePopOver);
+// btn2.addEventListener('click', closePopOver);
 function closePopOver (e){
     popOver.style.display = 'none';
 }
