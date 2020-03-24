@@ -1,9 +1,12 @@
+// const fileSystem = require('fs');
+// const errors = "error.txt";
 
 submit.addEventListener('click', submitForm);
-function submitForm (e){
-    if(text.value.trim() === ''){
+
+function submitForm(e) {
+    if (text.value.trim() === '') {
         validate.style.opacity = '1';
-        setTimeout(()=>{
+        setTimeout(() => {
             validate.style.opacity = '0';
         }, 1100)
     }
@@ -17,26 +20,28 @@ function submitForm (e){
     let url = 'http://api.openweathermap.org/data/2.5/weather?q= ' + cityName + '&units=metric&appid=' + apiKey;
     let method = 'GET';
     http.open(method, url);
-    http.onreadystatechange = function(){
-        if(http.readyState ==XMLHttpRequest.DONE && http.status === 200){
-                let data = JSON.parse(http.responseText);
-                let weatherData = new weather(cityName, data.weather[0].description.toUpperCase());
-                weatherData.temperature = data.main.temp;
-                updateWeather(weatherData);
-        }else if(http.readyState === XMLHttpRequest.DONE){ 
+    http.onreadystatechange = function () {
+        if (http.readyState == XMLHttpRequest.DONE && http.status === 200) {
+            let data = JSON.parse(http.responseText);
+            let weatherData = new weather(cityName, data.weather[0].description.toUpperCase());
+            weatherData.temperature = data.main.temp;
+            updateWeather(weatherData);
+        } else if (http.readyState === XMLHttpRequest.DONE) {
+            // fileSystem.writeFile(errors, "An error occurred while fetching data from the api")
             loadingText.style.display = 'none';
-            errorMsg.style.display ='block';
-            setTimeout(() =>{
+            errorMsg.style.display = 'block';
+            setTimeout(() => {
                 errorMsg.style.display = 'none';
             }, 4000)
         }
-   };
-   http.send();
+    };
+    http.send();
 }
-function updateWeather(weatherData){
+
+function updateWeather(weatherData) {
     updateCity.textContent = weatherData.cityName;
     cityText.textContent = weatherData.description;
     tempText.textContent = weatherData.temperature;
-    loadingText.style.display =" none";
-    loadingBox.style.display ="block";
+    loadingText.style.display = " none";
+    loadingBox.style.display = "block";
 }
