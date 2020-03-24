@@ -12,31 +12,42 @@ const btn2 = document.getElementById("closeBtn");
 const validate = document.querySelector(".validate");
 const dateDisplay = document.getElementById("date");
 const year = document.getElementById("year");
+const search_link = document.getElementById("search_link");
+const search_input = document.getElementById("search_input");
+const search_city = document.getElementById("search_city");
+
+search_link.addEventListener('click', () => {
+  text.style.display = 'none';
+  search_input.style.display = 'block';
+  search_city.innerText = 'search weather'
+
+})
 
 
 
 // instantiation of the date that effectively
+
 const date = new Date();
 const hours = date.getHours();
 let timeOfDay;
 
 year.innerText = date.getFullYear();
 // Displays the current date for the users to see!
-const dateValue = date;
+const dateValue = date.toUTCString();
 theDate.style.color = "#ffff";
 theDate.style.textAlign = "center";
 theDate.innerText = dateValue;
 
 if (hours < 12) {
   timeUpdate.style.color = "#FFFF";
-  timeOfDay = `Hello , Good morning`;
+  timeOfDay = `Good morning`;
 } else if (hours >= 12 && hours < 17) {
   timeUpdate.style.color = "#FFFF";
-  timeOfDay = "Hello, Good afternoon";
+  timeOfDay = `Good afternoon`;
   document.body.style.background = "#F52A47";
 } else {
   timeUpdate.style.color = "#FFFF";
-  timeOfDay = `Hello  , Good evening`;
+  timeOfDay = `Good evening`;
   document.body.style.background = "#807B7B";
 }
 
@@ -56,7 +67,7 @@ function changeBorder(e) {
   text.classList.add("changeBorder");
   if (text.value === "") {
     text.classList.remove("changeBorder");
-    errorMsg.style.display = "none";
+    errorMsg.style.opacity = "0";
     loadingBox.style.display = "none";
   }
 }

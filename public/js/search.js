@@ -13,7 +13,7 @@ function submitForm(e) {
     e.preventDefault();
     loadingText.style.display = 'block';
     loadingBox.style.display = 'none';
-    errorMsg.style.display = 'none';
+    errorMsg.style.opacity = '0';
     let cityName = text.value;
     let http = new XMLHttpRequest();
     let apiKey = '7733cf409739e72dc2741f7677dcb531';
@@ -29,9 +29,9 @@ function submitForm(e) {
         } else if (http.readyState === XMLHttpRequest.DONE) {
             // fileSystem.writeFile(errors, "An error occurred while fetching data from the api")
             loadingText.style.display = 'none';
-            errorMsg.style.display = 'block';
+            errorMsg.style.opacity = '1';
             setTimeout(() => {
-                errorMsg.style.display = 'none';
+                errorMsg.style.opacity = '0';
             }, 4000)
         }
     };
