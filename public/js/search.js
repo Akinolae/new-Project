@@ -27,9 +27,9 @@ function submitForm(e) {
         } else if (http.readyState === XMLHttpRequest.DONE) {
             // fileSystem.writeFile(errors, "An error occurred while fetching data from the api")
             loadingText.style.display = 'none';
-            errorMsg.style.opacity = '1';
+            errorMsg.style.display = 'block';
             setTimeout(() => {
-                errorMsg.style.opacity = '0';
+                errorMsg.style.display = 'none';
             }, 4000)
         }
     };

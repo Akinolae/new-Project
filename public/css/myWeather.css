@@ -28,8 +28,8 @@ body {
 
 .title_parent {
     background-color: #0c0c0c46;
-    width: 40%;
-    margin: auto;
+    width: 90%;
+    margin: 25px auto;
 }
 
 .title {
@@ -39,6 +39,19 @@ body {
     display: inline-block;
     padding: 10px;
     width: 100%;
+}
+
+.title>p {
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+}
+
+.title>a {
+    color: #06741a;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
 }
 
 .title>p:hover {
@@ -86,6 +99,7 @@ body {
 .search_btn {
     display: none;
 }
+
 
 
 .name {
@@ -194,7 +208,7 @@ body {
     height: 27vh;
     margin: 13px auto;
     border-radius: 4px;
-    opacity: 0;
+    display: none;
     transition: all ease 0.3s;
 
 }
@@ -224,6 +238,9 @@ body {
     transform: scale(1.2);
 }
 
+.search_btn {
+    background-color: #e75959ce;
+}
 
 #popOver {
     width: 30px;

@@ -21,37 +21,31 @@ class NewsData {
     constructor(news_data) {
         this.myTitle = news_data;
     }
-    static createNewElement(newElement) {
+    static createNewParagraphElement(newElement) {
         var p_tag = document.createElement("p");
         p_tag.textContent = newElement;
         return p_tag;
     }
+    static createNewLinkElement(linkElement) {
+        var a_tag = document.createElement("a");
+        var link = document.createTextNode(linkElement);
+        a_tag.appendChild(link);
+        return a_tag;
+    }
     ukNews(e) {
         const url = 'https://newsapi.org/v2/top-headlines?' + 'country=us&' + 'apiKey=797bc6132d9d4515a4653fd5350e6ce7';
         const myUrl = new Request(url);
-        // fetch(myUrl)
-        //     .then(response => response.json())
-        //     .then(data => {
-        const newUser = {
-            "age": 24,
-            "country": "Nigeria",
-            "school": "Unilorin",
-            "name": "Alfred Disick",
-            "wife": "Andreska  Radwanska",
-            "course": "Statistic"
-        }
-    
-        for (const string in newUser) {
-            this.myTitle.append(NewsData.createNewElement(newUser[string]));
-        }
-
-        // console.log(data.articles);
-        // for (const result of data.articles) {
-        //     // console.log(result);
-        //     myTitle.innerText = result;
-        //     this.myTitle.append(NewsData.createNewElement(r));
-        // }
-        // })
+        fetch(myUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log(data.articles[0])
+                for (const string in data.articles) {
+                    this.myTitle.append(NewsData.createNewLinkElement(data.articles[string].url));
+                    this.myTitle.append(NewsData.createNewParagraphElement(data.articles[string].description));
+                    console.log(data.articles[string].description);
+                    console.log(data.articles[string].url);
+                }
+            })
     }
     naijaNews(e) {
         const url = 'https://newsapi.org/v2/top-headlines?' + 'country=ng&' + 'apiKey=797bc6132d9d4515a4653fd5350e6ce7';
@@ -59,9 +53,12 @@ class NewsData {
         fetch(myUrl)
             .then(response => response.json())
             .then(data => {
-                console.log(data);
-                for (const naija of data.articles) {
-                    console.log(naija);
+                console.log(data.articles[0])
+                for (const string in data.articles) {
+                    this.myTitle.append(NewsData.createNewLinkElement(data.articles[string].url));
+                    this.myTitle.append(NewsData.createNewParagraphElement(data.articles[string].description));
+                    console.log(data.articles[string].description);
+                    console.log(data.articles[string].url);
                 }
             })
     }
@@ -70,12 +67,20 @@ class NewsData {
         const myUrl = new Request(url);
         fetch(myUrl)
             .then(response => response.json())
-            .then(data => console.log(data))
+            .then(data => {
+                console.log(data.articles[0])
+                for (const string in data.articles) {
+                    this.myTitle.append(NewsData.createNewLinkElement(data.articles[string].url));
+                    this.myTitle.append(NewsData.createNewParagraphElement(data.articles[string].description));
+                    console.log(data.articles[string].description);
+                    console.log(data.articles[string].url);
+                }
+            })
     }
 }
 
 const new_news_data = new NewsData(myTitle);
-new_news_data.ukNews();
+new_news_data.naijaNews();
 // submit.addEventListener('', new_news_data.ukNews());
 
 const navigation = {
