@@ -10,22 +10,7 @@ body {
     transition: all ease-in-out 0.4s;
 }
 
-#search_link {
-    cursor: pointer;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    transition: color 0.3s ease-in-out;
-    margin: 5px auto;
-    margin-left: 15px;
-
-}
-
+#search_link,
 #search_city {
     cursor: pointer;
     color: white;
@@ -38,30 +23,67 @@ body {
     text-align: center;
     transition: color 0.3s ease-in-out;
     margin: 5px auto;
-    margin-left: 15px;
+
+}
+
+.title_parent {
+    background-color: #0c0c0c46;
+    width: 40%;
+    margin: auto;
+}
+
+.title {
+    color: #ffff;
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+}
+
+.title>p:hover {
+    background-color: #ffff;
+    color: #000000fb;
+    transition: all ease 0.3s;
+}
+
+
+.my-form {
+    background: #7266665b;
+    padding: 10px;
+    height: 260px;
+    width: 60%;
+    margin: 15px auto;
+    color: white;
+    position: relative;
+    /* box-shadow: 20px 20px  15px  #333333; */
 }
 
 .my-form form {
     width: 73%;
     height: 11vh;
     background: #fff;
-    margin: 70px auto;
+    margin: 80px auto;
     border-radius: 45px;
     display: flex;
+    justify-self: center;
     position: relative;
 }
 
-.search_input {
-    width: 100%;
-    position: absolute;
+.my-form form>input {
     font-size: 20px;
-    /* width: 85%; */
+    width: 85%;
     height: 100%;
     text-align: center;
     margin: auto;
     outline: none;
     border: none;
     background: none;
+    position: absolute;
+}
+
+.search_input,
+.search_btn {
     display: none;
 }
 
@@ -136,15 +158,6 @@ body {
     font-family: sans-serif;
 }
 
-.my-form {
-    background: #7266665b;
-    padding: 10px;
-    height: 260px;
-    width: 60%;
-    margin: 15px auto;
-    color: white;
-    /* box-shadow: 20px 20px  15px  #333333; */
-}
 
 .logo {
     text-align: center;
@@ -165,17 +178,6 @@ body {
 .logo p {
     color: white;
     text-align: center;
-}
-
-#text {
-    font-size: 20px;
-    width: 85%;
-    height: 100%;
-    text-align: center;
-    margin: auto;
-    outline: none;
-    border: none;
-    background: none;
 }
 
 #description {

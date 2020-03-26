@@ -1,10 +1,8 @@
-// const fileSystem = require('fs');
-// const errors = "error.txt";
-
+// Dear developer/software Engineer, Kindly leave this code as e dey. kindly use as forked thank you!. **SMILES**
 submit.addEventListener('click', submitForm);
 
 function submitForm(e) {
-    if (text.value.trim() === '') {
+    if (text.value.trim() === '' && search_input.value.trim() === '') {
         validate.style.opacity = '1';
         setTimeout(() => {
             validate.style.opacity = '0';

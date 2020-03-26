@@ -18,11 +18,11 @@
         <p class="mt-4">A weather app you can trust...</p>
     </div>
     <div class='navigation'>
-        <a href="/about" class='about' title="about">About </a>
         <a href="/news" class='about' title="news">News </a>
         <a href="/version" class='version' id="version" title="version">version</a>
-        <p id="search_link">search</p>
-        <p id="search_city"></p>
+        <a href="/about" class='about' title="about">About </a>
+        <p id="search_link" title="search">search</p>
+        <p id="search_city" title="weather search">weather search</p>
     </div>
 
     <div id="time"></div>
@@ -32,8 +32,9 @@
     </div>
     <div class="my-form">
         <form>
-            <input type="text" class="search_input" id="search_input" placeholder="search here">
-            <input type="text" id="text" placeholder="city name">
+            <input type="text" class="search_input" id="search_input" placeholder="search google">
+            <button class="btn search_btn" id="search_btn">search</button>
+            <input type="text" id="text" placeholder="search city weather">
             <button id="submit" class="btn">
                 <i class="fas fa-search"></i>
             </button>
@@ -51,10 +52,12 @@
         <div id="temp" style="color: green;">temperature</div>
     </div>
 
-    <h1 id="display"></h1>
-    <p class="news" id="news"></p>
-    <p class="title" id="title"></p>
-    <h5 class="text" id="text"></h5>
+    <!-- <h1 id="display"></h1> -->
+    <!-- <p class="news" id="news"></p> -->
+    <div class="title_parent">
+        <div class="title" id="title"></div>
+    </div>
+    <!-- <h5 class="text" id="text"></h5> -->
     <footer>
         <h2> &copy Akinola <span id="year"></span></h2>
     </footer>
