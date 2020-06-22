@@ -1,18 +1,27 @@
 // Dear developer/software Engineer, Kindly leave this code as e dey. kindly use as forked thank you!. **SMILES**
 submit.addEventListener('click', submitForm);
+const weather_search_history = []
 
 function submitForm(e) {
-    if (text.value.trim() === '' && search_input.value.trim() === '') {
+    e.preventDefault();
+    if (text.value.trim() === '' || search_input.value.trim() === '') {
         validate.style.opacity = '1';
         setTimeout(() => {
             validate.style.opacity = '0';
         }, 1100)
     }
-    e.preventDefault();
     loadingText.style.display = 'block';
     loadingBox.style.display = 'none';
-    errorMsg.style.opacity = '0';
+    errorMsg.style.display = 'none';
     let cityName = text.value;
+    weather_search_history.push(cityName);
+
+    // Loop through the weather_search_history Array;
+    // The new data is then sent to the front end as a list of history of search!.
+    for (let index = 0; index < weather_search_history.length; index++) {
+        const history = weather_search_history[index];
+        console.log(history);
+    }
     let http = new XMLHttpRequest();
     let apiKey = '7733cf409739e72dc2741f7677dcb531';
     let url = 'http://api.openweathermap.org/data/2.5/weather?q= ' + cityName + '&units=metric&appid=' + apiKey;
@@ -25,7 +34,6 @@ function submitForm(e) {
             weatherData.temperature = data.main.temp;
             updateWeather(weatherData);
         } else if (http.readyState === XMLHttpRequest.DONE) {
-            // fileSystem.writeFile(errors, "An error occurred while fetching data from the api")
             loadingText.style.display = 'none';
             errorMsg.style.display = 'block';
             setTimeout(() => {

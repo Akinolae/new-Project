@@ -10,22 +10,6 @@ body {
     transition: all ease-in-out 0.4s;
 }
 
-#search_link,
-#search_city {
-    cursor: pointer;
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-    font-size: 16px;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    transition: color 0.3s ease-in-out;
-    margin: 5px auto;
-
-}
-
 .title_parent {
     background-color: #0c0c0c46;
     width: 90%;
@@ -39,6 +23,10 @@ body {
     display: inline-block;
     padding: 10px;
     width: 100%;
+}
+
+.title_parent>h2 {
+    padding: 10px;
 }
 
 .title>p {
@@ -64,8 +52,8 @@ body {
 .my-form {
     background: #7266665b;
     padding: 10px;
-    height: 260px;
-    width: 60%;
+    height: 35%;
+    width: 40%;
     margin: 15px auto;
     color: white;
     position: relative;
@@ -74,7 +62,7 @@ body {
 
 .my-form form {
     width: 73%;
-    height: 11vh;
+    min-height: 50%;
     background: #fff;
     margin: 80px auto;
     border-radius: 45px;
@@ -84,14 +72,15 @@ body {
 }
 
 .my-form form>input {
-    font-size: 20px;
-    width: 85%;
+    font-size: 16px;
+    width: 100%;
+    overflow: hidden;
     height: 100%;
     text-align: center;
-    margin: auto;
     outline: none;
     border: none;
     background: none;
+    justify-self: center;
     position: absolute;
 }
 
@@ -100,7 +89,30 @@ body {
     display: none;
 }
 
+.country {
+    width: 50%;
+}
 
+.country>ul {
+    display: flex;
+    width: 30%;
+}
+
+.country>ul>li {
+    list-style: none;
+    color: #ffff;
+    font-family: sans-serif;
+    width: 100%;
+    cursor: pointer;
+    transition: all ease 0.2s;
+    padding: 15px;
+}
+
+.country>ul>li:hover {
+    background-color: #ffff;
+    color: #000000;
+    transform: scale(1.1);
+}
 
 .name {
     color: #06741a;
@@ -108,17 +120,10 @@ body {
 
 #loading {
     color: #201c1c;
-    background: #d3d4da;
     display: none;
-    height: 180px;
-    width: 400px;
     text-align: center;
-    padding: 7px;
     margin: auto;
-    line-height: 4em;
-    opacity: 0.7;
     box-shadow: 0px 0px 10px black;
-    border-radius: 5px;
 }
 
 #load {
@@ -216,8 +221,8 @@ body {
 .btn {
     cursor: pointer;
     background: royalblue;
-    height: 60px;
-    width: 60px;
+    min-height: 15%;
+    min-width: 9%;
     border: none;
     border-radius: 50%;
     color: white;
@@ -274,30 +279,32 @@ body {
 
 .navigation {
     display: flex;
-    width: 45%;
-    margin: 20px auto;
+    width: 30%;
+    margin: auto;
     justify-content: center;
+    color: white;
 }
 
-.navigation>a {
+.navigation a,
+.navigation p {
     height: 53px;
-    width: auto;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .about,
 .version,
-.signIn {
+#search_link,
+#search_city {
+    padding: 13px;
     color: white;
-    padding: 10px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     font-family: sans-serif;
     display: flex;
     justify-content: center;
-    text-align: center;
+    /* text-align: center; */
     transition: color 0.3s ease-in-out;
-    margin: 5px auto;
-    margin-left: 15px;
 }
 
 .about:hover,

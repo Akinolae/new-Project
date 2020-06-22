@@ -8,17 +8,21 @@ const tempText = document.getElementById("temp");
 const timeUpdate = document.getElementById("time");
 const theDate = document.getElementById("date");
 const errorMsg = document.getElementById("error");
-const btn2 = document.getElementById("closeBtn");
 const validate = document.querySelector(".validate");
+
+// Date Display element. 
 const dateDisplay = document.getElementById("date");
 const year = document.getElementById("year");
+
+// weather search google search && weather search!
 const search_link = document.getElementById("search_link");
 const search_input = document.getElementById("search_input");
 const search_city = document.getElementById("search_city");
 const search_btn = document.getElementById("search_btn");
 
+// uptimized search history!
 
-//controls the navigation *Search and weatherSearch respectively* 
+//controls the navigations *Search and weatherSearch respectively* 
 search_link.addEventListener('click', () => {
   search_btn.style.display = 'block';
   text.style.display = 'none';
@@ -38,9 +42,18 @@ search_city.addEventListener('click', () => {
 
 search_btn.addEventListener('click', (e) => {
   e.preventDefault();
-  const search_value = search_input.value;
-  const url = "https://www.google.com/search?q=" + search_value;
-  window.location.replace(url);
+  if (search_input.value.trim() === "") {
+    errorMsg.style.display = 'none';
+    loadingText.style.display = "none";
+    validate.style.opacity = "1";
+    setTimeout(() => {
+      validate.style.opacity = '0';
+    }, 1100)
+  } else {
+    const search_value = search_input.value;
+    const url = "https://www.google.com/search?q=" + search_value;
+    window.location.replace(url);
+  }
 })
 //The control ends here! 
 // =====================
@@ -77,37 +90,9 @@ if (hours < 12) {
 
 timeUpdate.textContent = timeOfDay;
 
-function closePopOver(e) {
-  popOver.style.display = "none";
-}
-text.addEventListener("keyup", changeBorder);
-
 function changeBorder(e) {
-  text.classList.add("changeBorder");
-  if (text.value === "" && search_input.value === "") {
-    text.classList.remove("changeBorder");
-    errorMsg.style.opacity = "0";
-    loadingBox.style.display = "none";
+  if (search_input.value.trim() === "") {
+    errorMsg.style.display = "block";
+
   }
 }
-
-// document.getElementById('btn').addEventListener('click', getData);
-
-// function getData (){
-//             fetch('http://localhost:3000/user')
-//             .then(res => res.json())
-//             .then(data =>{
-//                 res.send(data)
-//                 console.log(data)
-//               document.getElementById('display').textContent = data;
-//             })
-// }
-// const newUser = {
-//   "age": 24,
-//   "country": "Nigeria",
-//   "school": "Unilorin",
-//   "name": "Alfred Disick"
-// }
-// for (const string in newUser) {
-//   console.log(string);
-// }

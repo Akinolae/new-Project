@@ -23,11 +23,7 @@ form a:hover {
 }
 
 form {
-  display: block;
-  width: 90%;
-  margin:20px auto;
-  padding: 20px;
-  height: 30%;
+  
 }
 
 form p {
@@ -55,7 +51,6 @@ form input {
   margin: 15px auto;
   padding: 10px;
   outline: none;
-
 }
 
 form button {
